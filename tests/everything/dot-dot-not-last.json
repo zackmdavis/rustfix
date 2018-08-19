@@ -1,0 +1,111 @@
+{
+    "message": "expected `}`, found `,`",
+    "code": null,
+    "level": "error",
+    "spans": [
+        {
+            "file_name": "tests/everything/dot-dot-not-last.rs",
+            "byte_start": 101,
+            "byte_end": 102,
+            "line_start": 5,
+            "line_end": 5,
+            "column_start": 19,
+            "column_end": 20,
+            "is_primary": true,
+            "text": [
+                {
+                    "text": "    let Point { .., y, } = p;",
+                    "highlight_start": 19,
+                    "highlight_end": 20
+                }
+            ],
+            "label": "expected `}`",
+            "suggested_replacement": null,
+            "suggestion_applicability": null,
+            "expansion": null
+        },
+        {
+            "file_name": "tests/everything/dot-dot-not-last.rs",
+            "byte_start": 99,
+            "byte_end": 102,
+            "line_start": 5,
+            "line_end": 5,
+            "column_start": 17,
+            "column_end": 20,
+            "is_primary": false,
+            "text": [
+                {
+                    "text": "    let Point { .., y, } = p;",
+                    "highlight_start": 17,
+                    "highlight_end": 20
+                }
+            ],
+            "label": "`..` must be at the end and cannot have a trailing comma",
+            "suggested_replacement": null,
+            "suggestion_applicability": null,
+            "expansion": null
+        }
+    ],
+    "children": [
+        {
+            "message": "move the `..` to the end of the field list",
+            "code": null,
+            "level": "help",
+            "spans": [
+                {
+                    "file_name": "tests/everything/dot-dot-not-last.rs",
+                    "byte_start": 99,
+                    "byte_end": 102,
+                    "line_start": 5,
+                    "line_end": 5,
+                    "column_start": 17,
+                    "column_end": 20,
+                    "is_primary": true,
+                    "text": [
+                        {
+                            "text": "    let Point { .., y, } = p;",
+                            "highlight_start": 17,
+                            "highlight_end": 20
+                        }
+                    ],
+                    "label": null,
+                    "suggested_replacement": "",
+                    "suggestion_applicability": "Unspecified",
+                    "expansion": null
+                },
+                {
+                    "file_name": "tests/everything/dot-dot-not-last.rs",
+                    "byte_start": 106,
+                    "byte_end": 107,
+                    "line_start": 5,
+                    "line_end": 5,
+                    "column_start": 24,
+                    "column_end": 25,
+                    "is_primary": true,
+                    "text": [
+                        {
+                            "text": "    let Point { .., y, } = p;",
+                            "highlight_start": 24,
+                            "highlight_end": 25
+                        }
+                    ],
+                    "label": null,
+                    "suggested_replacement": ".. }",
+                    "suggestion_applicability": "Unspecified",
+                    "expansion": null
+                }
+            ],
+            "children": [],
+            "rendered": null
+        }
+    ],
+    "rendered": "error: expected `}`, found `,`\n --> tests/everything/dot-dot-not-last.rs:5:19\n  |\n5 |     let Point { .., y, } = p;\n  |                 --^\n  |                 | |\n  |                 | expected `}`\n  |                 `..` must be at the end and cannot have a trailing comma\nhelp: move the `..` to the end of the field list\n  |\n5 |     let Point {  y, .. } = p;\n  |                --   ^^^^\n\n"
+}
+{
+    "message": "aborting due to previous error",
+    "code": null,
+    "level": "error",
+    "spans": [],
+    "children": [],
+    "rendered": "error: aborting due to previous error\n\n"
+}
